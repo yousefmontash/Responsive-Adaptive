@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:resp_and_adapt/src/core/styles/app_styles.dart';
 
 class QuickInvoiceHeader extends StatelessWidget {

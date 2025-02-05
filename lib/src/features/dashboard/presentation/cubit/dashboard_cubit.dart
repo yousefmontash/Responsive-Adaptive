@@ -39,6 +39,7 @@ class DashboardCubit extends Cubit<DashboardState> {
 
   int activeDrawerItem = 0;
   int activeExpenseItem = 0;
+  int activePageView = 0;
 
   void changeActiveDrawerItem(int newIndex) {
     activeDrawerItem = newIndex;
@@ -47,6 +48,11 @@ class DashboardCubit extends Cubit<DashboardState> {
 
   void changeActiveExpenseItem(int newIndex) {
     activeExpenseItem = newIndex;
+    emit(DashboardSuccessful());
+  }
+
+  void changeActivePageView(int newIndex) {
+    activePageView = newIndex;
     emit(DashboardSuccessful());
   }
 }
