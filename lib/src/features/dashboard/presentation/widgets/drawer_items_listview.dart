@@ -14,21 +14,23 @@ class DrawerItemsListView extends StatelessWidget {
     return BlocBuilder<DashboardCubit, DashboardState>(
       builder: (context, state) {
         return SliverList.builder(
-          itemCount: DashboardCubit.get(context).items.length,
+          itemCount: DashboardCubit.get(context).drawerItems.length,
           itemBuilder: (context, index) => GestureDetector(
             onTap: () {
-              if (DashboardCubit.get(context).activeIndex != index) {
-                DashboardCubit.get(context).changeActiveIndex(index);
+              if (DashboardCubit.get(context).activeDrawerItem != index) {
+                DashboardCubit.get(context).changeActiveDrawerItem(index);
               }
             },
             child: Padding(
               padding: const EdgeInsets.only(top: 20),
-              child: DashboardCubit.get(context).activeIndex == index
+              child: DashboardCubit.get(context).activeDrawerItem == index
                   ? ActiveDrawerItem(
-                      drawerItemModel: DashboardCubit.get(context).items[index],
+                      drawerItemModel:
+                          DashboardCubit.get(context).drawerItems[index],
                     )
                   : InActiveDrawerItem(
-                      drawerItemModel: DashboardCubit.get(context).items[index],
+                      drawerItemModel:
+                          DashboardCubit.get(context).drawerItems[index],
                     ),
             ),
           ),

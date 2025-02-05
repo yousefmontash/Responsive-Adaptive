@@ -40,14 +40,18 @@ class CustomDrawer extends StatelessWidget {
                     ),
                   ),
                   InActiveDrawerItem(
-                      drawerItemModel: DrawerItemModel(
-                          title: "Setting system",
-                          image: AppImages.imagesSettings)),
+                    drawerItemModel: DrawerItemModel(
+                      title: "Setting system",
+                      image: AppImages.imagesSettings,
+                    ),
+                  ),
                   Gap(20),
                   InActiveDrawerItem(
-                      drawerItemModel: DrawerItemModel(
-                          title: "Logout account",
-                          image: AppImages.imagesLogout)),
+                    drawerItemModel: DrawerItemModel(
+                      title: "Logout account",
+                      image: AppImages.imagesLogout,
+                    ),
+                  ),
                   Gap(48),
                 ],
               ),
