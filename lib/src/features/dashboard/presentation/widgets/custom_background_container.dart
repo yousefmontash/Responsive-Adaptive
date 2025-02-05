@@ -8,6 +8,7 @@ class CustomBackgroundContainer extends StatelessWidget {
   });
   final Widget child;
   final double? paddingValue;
+  /// default value is 20
 
   @override
   Widget build(BuildContext context) {

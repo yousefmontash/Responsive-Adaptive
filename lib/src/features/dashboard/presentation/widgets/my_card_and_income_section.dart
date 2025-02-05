@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:resp_and_adapt/src/features/dashboard/presentation/widgets/my_card.dart';
+import 'package:resp_and_adapt/src/features/dashboard/presentation/widgets/income_section.dart';
+import 'package:resp_and_adapt/src/features/dashboard/presentation/widgets/my_card_and_transaction_history.dart';
 
 class MyCardAndIncomeSection extends StatelessWidget {
   const MyCardAndIncomeSection({super.key});
@@ -11,7 +12,9 @@ class MyCardAndIncomeSection extends StatelessWidget {
       child: Column(
         children: [
           Gap(40),
-          MyCard(),
+          MyCardAndTransactionHistory(),
+          Gap(24),
+          IncomeSection(),
         ],
       ),
     );

@@ -12,7 +12,7 @@ class MyCardItem extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 420 / 215,
       child: Container(
-         decoration: BoxDecoration(
+        decoration: BoxDecoration(
           image: const DecorationImage(
             fit: BoxFit.fill,
             image: AssetImage(
