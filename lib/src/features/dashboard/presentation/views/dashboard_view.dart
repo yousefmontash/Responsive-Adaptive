@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:resp_and_adapt/src/core/styles/size_config.dart';
 import 'package:resp_and_adapt/src/core/utils/extensions/context_extension.dart';
 import 'package:resp_and_adapt/src/features/dashboard/presentation/cubit/dashboard_cubit.dart';
 import 'package:resp_and_adapt/src/features/dashboard/presentation/widgets/adaptive_layout.dart';
@@ -18,8 +19,9 @@ class DashBoardView extends StatelessWidget {
       create: (context) => DashboardCubit(),
       child: Scaffold(
         key: scaffoldKey,
-        drawer: context.width <= 800 ? CustomDrawer() : null,
-        appBar: context.width <= 800
+        drawer:
+            context.width < SizeConfig.tabletBreakPoint ? CustomDrawer() : null,
+        appBar: context.width < SizeConfig.tabletBreakPoint
             ? AppBar(
                 backgroundColor: Color(0xFF4EB7F2),
                 leading: IconButton(

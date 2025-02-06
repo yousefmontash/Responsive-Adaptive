@@ -9,6 +9,25 @@ class ChartItemDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // return ListTile(
+    //   leading: Container(
+    //     width: 12,
+    //     height: 12,
+    //     decoration: ShapeDecoration(
+    //       color: chartItem.color,
+    //       shape: const OvalBorder(),
+    //     ),
+    //   ),
+    //   title: Text(
+    //     chartItem.title,
+    //     style: AppStyles.styleRegular16,
+    //   ),
+    //   trailing: Text(
+    //     chartItem.percentage,
+    //     style: AppStyles.styleMedium16,
+    //   ),
+    // );
+
     return Row(
       children: [
         CircleAvatar(
@@ -16,11 +35,13 @@ class ChartItemDetails extends StatelessWidget {
           backgroundColor: chartItem.color,
         ),
         Gap(12),
-        Text(
-          chartItem.title,
-          style: AppStyles.styleRegular16,
+        Expanded(
+          child: Text(
+            chartItem.title,
+            style: AppStyles.styleRegular16,
+          ),
         ),
-        Spacer(),
+        Gap(8),
         Text(
           "${chartItem.percentage}%",
           style: AppStyles.styleMedium16.copyWith(

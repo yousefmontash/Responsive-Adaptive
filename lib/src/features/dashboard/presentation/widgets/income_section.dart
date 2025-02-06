@@ -18,12 +18,12 @@ class IncomeSection extends StatelessWidget {
           Row(
             children: [
               Expanded(
-                flex: 1,
+                flex: 2,
                 child: IncomeChart(),
               ),
               Gap(40),
               Expanded(
-                flex: 2,
+                flex: 3,
                 child: IncomeDetails(),
               ),
             ],
