@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:resp_and_adapt/src/features/dashboard/domain/models/chart_item_model.dart';
 import 'package:resp_and_adapt/src/features/dashboard/presentation/widgets/chart_item_details.dart';
 
@@ -29,13 +30,17 @@ class IncomeDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true,
-      // physics: NeverScrollableScrollPhysics(),
-      itemCount: items.length,
-      itemBuilder: (context, index) {
-        return ChartItemDetails(chartItem: items[index]);
-      },
+    return Column(
+      children: List.generate(
+        items.length * 2 - 1,
+        (index) {
+          if (index % 2 == 0) {
+            return ChartItemDetails(chartItem: items[(index ~/ 2)]);
+          } else {
+            return Gap(12);
+          }
+        },
+      ),
     );
   }
 }

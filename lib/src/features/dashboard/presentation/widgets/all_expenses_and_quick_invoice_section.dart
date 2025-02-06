@@ -9,15 +9,13 @@ class AllExpensesAndQuickInvoiceSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          if (context.width > 800) Gap(40),
-          AllExpenses(),
-          Gap(24),
-          QuickInvoice(),
-        ],
-      ),
+    return Column(
+      children: [
+        if (context.width > 800) Gap(40),
+        AllExpenses(),
+        Gap(24),
+        QuickInvoice(),
+      ],
     );
   }
 }
