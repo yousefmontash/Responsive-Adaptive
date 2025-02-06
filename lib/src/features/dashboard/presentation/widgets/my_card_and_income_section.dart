@@ -13,7 +13,7 @@ class MyCardAndIncomeSection extends StatelessWidget {
         Gap(40),
         MyCardAndTransactionHistory(),
         Gap(24),
-        IncomeSection(),
+        Expanded(child: IncomeSection()),
       ],
     );
   }

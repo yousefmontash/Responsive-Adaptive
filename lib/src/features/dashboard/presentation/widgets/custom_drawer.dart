@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:resp_and_adapt/src/core/styles/app_images.dart';
+import 'package:resp_and_adapt/src/core/utils/extensions/context_extension.dart';
 import 'package:resp_and_adapt/src/features/dashboard/domain/models/drawer_item_model.dart';
 import 'package:resp_and_adapt/src/features/dashboard/domain/models/user_model.dart';
 import 'package:resp_and_adapt/src/features/dashboard/presentation/widgets/drawer_items_listview.dart';
@@ -13,6 +14,7 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: context.width * 0.7,
       decoration: const BoxDecoration(color: Colors.white),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),

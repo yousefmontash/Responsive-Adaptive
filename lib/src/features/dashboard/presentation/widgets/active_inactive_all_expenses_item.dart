@@ -21,7 +21,9 @@ class ActiveAllExpensesItem extends StatelessWidget {
         children: [
           AllExpensesItemHeader(
             image: expensesModel.expenseType.image,
-            iconBackgroundColor: Colors.white.withOpacity(0.1),
+            iconBackgroundColor: Colors.white.withValues(
+                alpha: ((1 - 0.1) * 256)
+                    .roundToDouble()), // 0.1 is the opacity i want (10% of the color)
             iconColor: Colors.white,
           ),
           const Gap(34),
