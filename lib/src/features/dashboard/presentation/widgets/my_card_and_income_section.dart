@@ -8,15 +8,13 @@ class MyCardAndIncomeSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
-      child: Column(
-        children: [
-          Gap(40),
-          MyCardAndTransactionHistory(),
-          Gap(24),
-          IncomeSection(),
-        ],
-      ),
+    return Column(
+      children: [
+        Gap(40),
+        MyCardAndTransactionHistory(),
+        Gap(24),
+        IncomeSection(),
+      ],
     );
   }
 }
