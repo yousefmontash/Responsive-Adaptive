@@ -15,18 +15,20 @@ class IncomeSection extends StatelessWidget {
         children: [
           IncomeHeader(),
           Gap(16),
-          Row(
-            children: [
-              Expanded(
-                flex: 2,
-                child: IncomeChart(),
-              ),
-              Gap(40),
-              Expanded(
-                flex: 3,
-                child: IncomeDetails(),
-              ),
-            ],
+          Expanded(
+            child: Row(
+              children: [
+                Expanded(
+                  flex: 2,
+                  child: IncomeChart(),
+                ),
+                Gap(40),
+                Expanded(
+                  flex: 3,
+                  child: IncomeDetails(),
+                ),
+              ],
+            ),
           ),
         ],
       ),

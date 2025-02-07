@@ -33,11 +33,12 @@ class MyCardItem extends StatelessWidget {
               ),
               title: Text(
                 "Name card",
-                style: AppStyles.styleRegular16.copyWith(color: Colors.white),
+                style: AppStyles.styleRegular16(context)
+                    .copyWith(color: Colors.white),
               ),
-              subtitle: const Text(
+              subtitle: Text(
                 "Syah Bandi",
-                style: AppStyles.styleMedium20,
+                style: AppStyles.styleMedium20(context),
               ),
               trailing: SvgPicture.asset(
                 AppImages.imagesGallery,
@@ -52,19 +53,19 @@ class MyCardItem extends StatelessWidget {
                 children: [
                   Text(
                     "0918 8124 0042 8129",
-                    style:
-                        AppStyles.styleSemiBold24.copyWith(color: Colors.white),
+                    style: AppStyles.styleSemiBold24(context)
+                        .copyWith(color: Colors.white),
                   ),
                   const Gap(12),
                   Text(
                     "12/20 - 124",
-                    style:
-                        AppStyles.styleRegular16.copyWith(color: Colors.white),
+                    style: AppStyles.styleRegular16(context)
+                        .copyWith(color: Colors.white),
                   ),
                 ],
               ),
             ),
-            const Gap(24),
+            MaxGap(24), // the same as Flexible(child: const Gap(24)),
           ],
         ),
       ),

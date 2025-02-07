@@ -9,16 +9,24 @@ class DashBoardMobileLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-            child: Column(
-              children: [
-                AllExpensesAndQuickInvoiceSection(),
-                Gap(24),
-                MyCardAndTransactionHistory(),
-                Gap(24),
-                IncomeSection(),
-              ],
-            ),
-          );
+    return CustomScrollView(
+      slivers: [
+        SliverToBoxAdapter(
+          child: Column(
+            children: [
+              AllExpensesAndQuickInvoiceSection(),
+              Gap(24),
+              MyCardAndTransactionHistory(),
+              Gap(24),
+              // IncomeSection(),
+            ],
+          ),
+        ),
+        SliverFillRemaining(
+          hasScrollBody: false,
+          child: IncomeSection(),
+        )
+      ],
+    );
   }
 }

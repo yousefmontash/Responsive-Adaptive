@@ -12,24 +12,21 @@ class UserInfoListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(0)),
-      elevation: 0,
+    return Container(
       color: const Color(0xFFFAFAFA),
-      child: Center(
-        child: ListTile(
-          leading: SvgPicture.asset(
-            user.image,
-            height: 48,
-          ),
-          title: Text(
-            user.name,
-            style: AppStyles.styleSemiBold16,
-          ),
-          subtitle: Text(
-            user.email,
-            style: AppStyles.styleRegular12,
-          ),
+      child: ListTile(
+        contentPadding: EdgeInsets.symmetric(horizontal: 0),
+        leading: SvgPicture.asset(
+          user.image,
+          height: 48,
+        ),
+        title: Text(
+          user.name,
+          style: AppStyles.styleSemiBold16(context),
+        ),
+        subtitle: Text(
+          user.email,
+          style: AppStyles.styleRegular12(context),
         ),
       ),
     );

@@ -38,13 +38,13 @@ class ChartItemDetails extends StatelessWidget {
         Expanded(
           child: Text(
             chartItem.title,
-            style: AppStyles.styleRegular16,
+            style: AppStyles.styleRegular16(context),
           ),
         ),
         Gap(8),
         Text(
           "${chartItem.percentage}%",
-          style: AppStyles.styleMedium16.copyWith(
+          style: AppStyles.styleMedium16(context).copyWith(
             color: Color(0xFF208CC8),
           ),
         )

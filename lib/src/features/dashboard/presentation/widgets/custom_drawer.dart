@@ -16,23 +16,27 @@ class CustomDrawer extends StatelessWidget {
     return Container(
       width: context.width * 0.7,
       decoration: const BoxDecoration(color: Colors.white),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: CustomScrollView(
-          slivers: [
-            SliverToBoxAdapter(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 8),
-                child: UserInfoListTile(
-                  user: UserModel(
-                      image: AppImages.imagesAvatar3,
-                      name: "Lekan Okeowo",
-                      email: "demo@gmail.com"),
-                ),
+      child: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: Padding(
+              padding:
+                  const EdgeInsets.symmetric(vertical: 8, horizontal: 20),
+              child: UserInfoListTile(
+                user: UserModel(
+                    image: AppImages.imagesAvatar3,
+                    name: "Lekan Okeowo",
+                    email: "demo@gmail.com"),
               ),
             ),
-            const DrawerItemsListView(),
-            const SliverFillRemaining(
+          ),
+          SliverPadding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            sliver: const DrawerItemsListView(),
+          ),
+          SliverPadding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            sliver: const SliverFillRemaining(
               hasScrollBody: false,
               child: Column(
                 children: [
@@ -57,9 +61,9 @@ class CustomDrawer extends StatelessWidget {
                   Gap(48),
                 ],
               ),
-            )
-          ],
-        ),
+            ),
+          )
+        ],
       ),
     );
   }

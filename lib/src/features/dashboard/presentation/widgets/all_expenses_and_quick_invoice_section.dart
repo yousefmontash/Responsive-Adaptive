@@ -12,7 +12,7 @@ class AllExpensesAndQuickInvoiceSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        if (context.width > SizeConfig.tabletBreakPoint) Gap(40),
+        if (context.width > SizeConfig.tablet) Gap(40),
         AllExpenses(),
         Gap(24),
         QuickInvoice(),

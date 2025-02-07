@@ -31,6 +31,7 @@ class IncomeDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: List.generate(
         items.length * 2 - 1,
         (index) {

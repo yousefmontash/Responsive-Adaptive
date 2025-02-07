@@ -60,7 +60,7 @@ class _CustomDropdownState extends State<CustomDropdown> {
                     children: [
                       Text(
                         option,
-                        style: AppStyles.styleMedium16,
+                        style: AppStyles.styleMedium16(context),
                       ),
                       const Gap(18),
                     ],

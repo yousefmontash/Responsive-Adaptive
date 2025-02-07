@@ -19,9 +19,8 @@ class DashBoardView extends StatelessWidget {
       create: (context) => DashboardCubit(),
       child: Scaffold(
         key: scaffoldKey,
-        drawer:
-            context.width < SizeConfig.tabletBreakPoint ? CustomDrawer() : null,
-        appBar: context.width < SizeConfig.tabletBreakPoint
+        drawer: context.width < SizeConfig.tablet ? CustomDrawer() : null,
+        appBar: context.width < SizeConfig.tablet
             ? AppBar(
                 backgroundColor: Color(0xFF4EB7F2),
                 leading: IconButton(

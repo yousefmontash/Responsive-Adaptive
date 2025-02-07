@@ -11,14 +11,14 @@ class MyCardAndTransactionHistory extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomBackgroundContainer(
+    return CustomBackgroundContainer(
       paddingValue: 24,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             "My Card",
-            style: AppStyles.styleSemiBold20,
+            style: AppStyles.styleSemiBold20(context),
           ),
           Gap(20),
           MyCardPageView(),
