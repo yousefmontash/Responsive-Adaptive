@@ -14,6 +14,10 @@ class ActiveAllExpensesItem extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
       decoration: BoxDecoration(
         color: const Color(0xFF4EB7F2),
+        border: Border.all(
+          color: const Color(0xFF4EB7F2),
+          width: 1,
+        ),
         borderRadius: BorderRadius.circular(12),
       ),
       child: Column(
@@ -30,20 +34,34 @@ class ActiveAllExpensesItem extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                expensesModel.expenseType.title,
-                style: AppStyles.styleSemiBold16(context).copyWith(color: Colors.white),
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  expensesModel.expenseType.title,
+                  style: AppStyles.styleSemiBold16(context)
+                      .copyWith(color: Colors.white),
+                ),
               ),
               const Gap(8),
-              Text(
-                expensesModel.date,
-                style: AppStyles.styleRegular14(context)
-                    .copyWith(color: const Color(0xFFFAFAFA)),
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  expensesModel.date,
+                  style: AppStyles.styleRegular14(context)
+                      .copyWith(color: const Color(0xFFFAFAFA)),
+                ),
               ),
               const Gap(16),
-              Text(
-                r"$" + expensesModel.value,
-                style: AppStyles.styleSemiBold24(context).copyWith(color: Colors.white),
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  r"$" + expensesModel.value,
+                  style: AppStyles.styleSemiBold24(context)
+                      .copyWith(color: Colors.white),
+                ),
               ),
             ],
           ),
@@ -78,19 +96,31 @@ class InactiveAllExpensesItem extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                expensesModel.expenseType.title,
-                style: AppStyles.styleSemiBold16(context),
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  expensesModel.expenseType.title,
+                  style: AppStyles.styleSemiBold16(context),
+                ),
               ),
               const Gap(8),
-              Text(
-                expensesModel.date,
-                style: AppStyles.styleRegular14(context),
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  expensesModel.date,
+                  style: AppStyles.styleRegular14(context),
+                ),
               ),
               const Gap(16),
-              Text(
-                r"$" + expensesModel.value,
-                style: AppStyles.styleSemiBold24(context),
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  r"$" + expensesModel.value,
+                  style: AppStyles.styleSemiBold24(context),
+                ),
               ),
             ],
           ),

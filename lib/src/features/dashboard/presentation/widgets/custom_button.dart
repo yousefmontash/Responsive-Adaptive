@@ -25,6 +25,7 @@ class CustomButton extends StatelessWidget {
         onPressed: () {},
         child: Text(
           title,
+          textAlign: TextAlign.center,
           style: AppStyles.styleSemiBold18(context).copyWith(
             color: titleColor ?? const Color(0xFFFFFFFF),
           ),
